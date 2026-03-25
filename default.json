@@ -1,5 +1,5 @@
 {
   "extends": [
-    "github>swiftty/renovate-config//presets/github-actions-matrix.json5#v0.0.0"
+    "github>swiftty/renovate-config//presets/github-actions-matrix.json5#v0.0.1"
   ]
 }
