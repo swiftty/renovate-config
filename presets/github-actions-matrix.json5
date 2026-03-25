@@ -1,0 +1,16 @@
+{
+  customManagers: [
+    {
+      customType: "regex",
+      description: "Update in matrix declarations",
+      fileMatch: ["\\.github/.*\\.ya?ml"],
+      matchStrings: [
+        // e.g.) os: macos-15
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s*-?\\s*[a-zA-Z0-9_-]+:\\s*(?<packageName>[^-\\s]+)-(?<currentValue>[^\\s]+)\\s",
+        // e.g.) container: swift:6.2
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s*-?\\s*[a-zA-Z0-9_-]+:\\s*(?<packageName>[^:\\s]+):(?<currentValue>[^\\s]+)\\s",
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s*-?\\s*[a-zA-Z0-9_-]+:\\s*(?<currentValue>[^\\s]+)\\s",
+      ],
+    },
+  ],
+}
