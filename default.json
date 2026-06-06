@@ -1,7 +1,7 @@
 {
   "extends": [
     "config:recommended",
-    "github>swiftty/renovate-config//presets/github-actions-matrix.json5#v0.0.1"
+    "github>swiftty/renovate-config//presets/github-actions-matrix.json5#v0.0.2"
   ],
   "automerge": true,
   "platformAutomerge": true
